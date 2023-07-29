@@ -34,37 +34,35 @@
         };
 		
         raise_layer {
-// ----------------------------------------------------------------------------------------------------------------------------------------------------
-// | ~ `   |  1 !  |  2 @  |   3 #  |  4 $  |  5 %  |                        ---                   |  6 ^  |  7 &  |  8 *  |  9 (  |  0 )  |   - _    |
-// | TAB   |   Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  M2   |   Y   |   U   |   I   |   O   |   P   |   = +    |
-// | ESC   |   A   |   S   |    D   |   F   |   G   |  [ {    |              ---           |  } ]  |   H   |   J   |   K   |   L   |  ;:   |   ' "    |
-// | SHIFT |   Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  HOME  |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
-// |  OS   |   +   |   -   |  ALT * |  ---  |  | \  | B SPACE |    ESC    |  ---  |  ENTER | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
-// ----------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | ~ `   |   F1   |   F2   |    F3  |     F4     |    F5   |                        ---                   |    F6   |     F7    |   F8  |   F9  |   F10 |   F11    |
+// | TAB   |  MUTE  | Vol Dn | Vol Up | Play/Pause |    T    |   M1    |              ---           |  M2   | BT NEXT |   BT PRV  |   I   |   O   |   P   |   F12    |
+// | ESC   | BT CLR |  BT1   |  BT1   |    BT1     |   BT1   |  BT1    |              ---           |  } ]  |    H    |     J.    |   K   |   L   |  ;:   |   ' "    |
+// | SHIFT |   Z    |   X    |   C    |     V      |    B    |  PG_UP  |  PG_DOWN  |  ---  |  HOME  |  END  |    N    |     M     |  , <  |  . >  |  /?   |  RSHIFT  |
+// |  OS   |   +    |   -    |  ALT * |    ---     |   | \   | B SPACE |    ESC    |  ---  |  ENTER | SPACE |   ALT   |    ---    |   <   |   v   |   ^   |    >     |
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-   &trans  &trans  &trans  &trans  &trans   &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans         &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+   &trans  &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans       &trans       &trans                   &trans  &BT_NXT &BT_PRV &trans  &trans  &trans   &kp F12
+   &trans  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans  &trans  &trans  &trans  &trans  &trans   &trans
+   &trans  &trans     &trans       &trans       &trans       &trans       &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+   &trans  &trans     &trans       &trans                    &trans       &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-	};
         adjust_layer {
-// ----------------------------------------------------------------------------------------------------------------------------------------------------
-// | ~ `   |  1 !  |  2 @  |   3 #  |  4 $  |  5 %  |                        ---                   |  6 ^  |  7 &  |  8 *  |  9 (  |  0 )  |   - _    |
-// | TAB   |   Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  M2   |   Y   |   U   |   I   |   O   |   P   |   = +    |
-// | ESC   |   A   |   S   |    D   |   F   |   G   |  [ {    |              ---           |  } ]  |   H   |   J   |   K   |   L   |  ;:   |   ' "    |
-// | SHIFT |   Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  HOME  |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
-// |  OS   |   +   |   -   |  ALT * |  ---  |  | \  | B SPACE |    ESC    |  ---  |  ENTER | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
-// ----------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | ~ `   |   F1   |   F2   |    F3  |     F4     |    F5   |                        ---                   |    F6   |     F7    |   F8  |   F9  |   F10 |   F11    |
+// | TAB   |  MUTE  | Vol Dn | Vol Up | Play/Pause |    T    |   M1    |              ---           |  M2   | BT NEXT |   BT PRV  |   I   |   O   |   P   |   F12    |
+// | ESC   | BT CLR |  BT1   |  BT1   |    BT1     |   BT1   |  BT1    |              ---           |  } ]  |    H    |     J.    |   K   |   L   |  ;:   |   ' "    |
+// | SHIFT |   Z    |   X    |   C    |     V      |    B    |  PG_UP  |  PG_DOWN  |  ---  |  HOME  |  END  |    N    |     M     |  , <  |  . >  |  /?   |  RSHIFT  |
+// |  OS   |   +    |   -    |  ALT * |    ---     |   | \   | B SPACE |    ESC    |  ---  |  ENTER | SPACE |   ALT   |    ---    |   <   |   v   |   ^   |    >     |
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-   &trans  &trans  &trans  &trans  &trans   &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans         &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                                        &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+   &trans  &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans       &trans       &trans                   &trans  &BT_NXT &BT_PRV &trans  &trans  &trans   &kp F12
+   &trans  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans  &trans  &trans  &trans  &trans  &trans   &trans
+   &trans  &trans     &trans       &trans       &trans       &trans       &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+   &trans  &trans     &trans       &trans                    &trans       &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-    };
 };
