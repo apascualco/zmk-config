@@ -18,53 +18,34 @@
         default_layer {
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
 // | ~ `   |  1 !  |  2 @  |   3 #  |  4 $  |  5 %  |                        ---                   |  6 ^  |  7 &  |  8 *  |  9 (  |  0 )  |   - _    |
-// | TAB   |   Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  M2   |   Y   |   U   |   I   |   O   |   P   |   = +    |
+// | TAB   |   Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  PWR  |   Y   |   U   |   I   |   O   |   P   |   = +    |
 // | ESC   |   A   |   S   |    D   |   F   |   G   |  [ {    |              ---           |  } ]  |   H   |   J   |   K   |   L   |  ;:   |   ' "    |
-// | SHIFT |   Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  HOME  |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
-// |  OS   |   +   |   -   |  ALT * |  ---  |  | \  | B SPACE |    ESC    |  ---  |  ENTER | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
+// | SHIFT |   Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  ----- |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
+// | GLOBE | LCTRL |  CMD  |   ALT  |  ---  |  | \  | B SPACE |    ENTER  |  ---  |  ----- | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-   &kp GRAVE  &kp N1      &kp N2       &kp N3                   &kp N4 &kp N5                                                           &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &kp MINUS
-   &kp TAB    &kp Q       &kp W        &kp E                    &kp R  &kp T                 &mo 1                            &mo 2     &kp Y    &kp U    &kp I     &kp O    &kp P     &kp EQUAL
-   &kp ESCAPE &kp A       &kp S        &kp D                    &kp F  &kp G                 &kp LBKT                         &kp RBKT  &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
-   &kp LSHFT  &kp Z       &kp X        &kp C                    &kp V  &kp B                 &kp PG_UP &kp PG_DN    &kp H     &kp ENTER &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
-   &kp LGUI   &kp KP_PLUS &kp KP_MINUS &mt LEFT_ALT KP_ASTERISK        &mt LEFT_CONTROL BSLH &kp BSPC  &kp DEL      &kp Y     &kp SPACE &kp RALT &kp LEFT &kp DOWN  &kp UP   &kp RIGHT
+   &kp GRAVE  &kp N1   &kp N2   &kp N3     &kp N4 &kp N5                                                   &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &kp MINUS
+   &kp TAB    &kp Q    &kp W    &kp E      &kp R  &kp T         &to 1                            &kp K_PWR &kp Y    &kp U    &kp I     &kp O    &kp P     &kp EQUAL
+   &kp ESCAPE &kp A    &kp S    &kp D      &kp F  &kp G         &kp LBKT                         &kp RBKT  &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
+   &kp LSHFT  &kp Z    &kp X    &kp C      &kp V  &kp B         &kp PG_UP &kp PG_DN    &kp ENTER &kp ENTER &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
+   &kp GLOBE  &kp LCMD &kp LCMD &mt LALT          &mt PIPE BSLH &kp BSPC  &kp ENTER    &kp ENTER &kp SPACE &kp RALT          &kp LEFT  &kp DOWN &kp UP    &kp RIGHT
             >;
 
-        };
-		
+        };		
         raise_layer {
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
-// | --- |   F1   |   F2   |    F3  |  F4 |  F5  |                      ---                  |    F6   |     F7    |   F8  |   F9  |   F10 |   F11    |
-// | --- |  MUTE  | Vol Dn | Vol Up | --- |  --- | --- |                ---          |  ---  | BT NEXT |   BT PRV  |  ---  |  ---  |  ---  |   F12    |
-// | --- | BT CLR |  BT0   |  BT1   | BT2 |  BT3 | BT4 |                ---          |  ---  |   ---   |    ---    |  ---  |  ---  |  ---  |   ---    |
-// | --- |  ---   |   ---  |   ---  | --- |  --- | --- | --- |  ---  |  ---  |  ---  |  ---  |   ---   |    ---    |  ---  |  ---  |  ---  |   ---    |
-// | --- |  ---   |   ---  |   ---  | --- | | \  | --- | --- |  ---  |  ---  |  ---  |  ---  |   ---   |    ---    |  ---  |  ---  |  ---  |   ---    |
+// | --- |   F1   |    F2    |    F3  |   F4   |    F5   |                      ---                  |    F6   |     F7    |   F8   |   F9  |   F10 |   F11    |
+// | --- |  NEXT  |   PLAY   |   MUTE | Vol Dn |  Vol Up | --- |                ---          |  M0   | BT NEXT |   BT PRV  | BT CLR |  ---  |  ---  |   F12    |
+// | --- | BRI UP | BRI DOWN |   ---  |   ---  |   ---   | --- |                ---          |  ---  |   BT0   |    BT1    |  BT2   |  BT3  |  BT4  |   ---    |
+// | --- |  ---   |    ---   |   ---  |   ---  |   ---   | --- | --- |  ---  |  ---  |  ---  |  ---  |   ---   |    ---    |  ---   |  ---  |  ---  |   ---    |
+// | --- |  ---   |    ---   |   ---  |   ---  |   ---   | --- | --- |  ---  |  ---  |  ---  |  ---  |   ---   |    ---    |  ---   |  ---  |  ---  |   ---    |
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-   &trans  &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                                        &kp F6      &kp F7      &kp F8  &kp F9  &kp F10  &kp F11
-   &trans  &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans       &trans       &trans                   &trans  &bt BT_NXT  &bt BT_PRV  &trans  &trans  &trans   &kp F12
-   &trans  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans  &trans      &trans      &trans  &trans  &trans   &trans
-   &trans  &trans     &trans       &trans       &trans       &trans       &trans &trans    &trans  &trans  &trans      &trans      &trans  &trans  &trans   &trans
-   &trans  &trans     &trans       &trans                    &trans       &trans &trans    &trans  &trans  &trans      &trans      &trans  &trans  &trans
+   &trans  &kp F1     &kp F2       &kp F3     &kp F4       &kp F5                                        &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
+   &trans	&kp K_NEXT &kp C_PP     &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans                   &to 0   &bt BT_NXT   &bt BT_PRV   &bt BT_CLR   &trans       &trans       &kp F12
+   &trans  &C_BRI_UP  &kp C_BRI_DN &trans     &trans       &trans       &trans                   &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   
+   &trans  &trans     &trans       &trans     &trans       &trans       &trans &trans    &trans  &trans  &trans       &trans       &trans       &trans       &trans       &trans
+   &trans  &trans     &trans       &trans                  &trans       &trans &trans    &trans  &trans  &trans                    &trans       &trans       &trans       &trans 
             >;
         };
-		
-        adjust_layer {
-// ------------------------------------------------------------------------------------------------------------------------------
-// | --- |   F1   |   F2   |    F3  |  F4  |    F5   |              ---              |    F6   |  F7    | F8  |  F9 | F10 | F11 |
-// | --- |  MUTE  | Vol Dn | Vol Up |  --- |   ---   | --- |        ---        | --- | BT NEXT | BT PRV | --- | --- | --- | F12 |
-// | --- | BT CLR |  BT1   |  BT1   |  BT1 |   BT1   | BT1 |        ---        | --- |   ---   |  ---   | --- | --- | --- | --- |
-// | --- |  ---   |  ---   |  ---   |  --- |   ---   | --- | --- |  ---  | --- | --- |   ---   |  ---   | --- | --- | --- | --- |
-// | --- |   ---  |  ---   |  ---   |  --- |   | \   | --- | --- |  ---  | --- | --- |   ---   |  ---   | --- | --- | --- | --- |
-// ------------------------------------------------------------------------------------------------------------------------------
-            bindings = <
-   &trans  &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                                        &kp F6      &kp F7      &kp F8  &kp F9  &kp F10  &kp F11
-   &trans  &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans       &trans       &trans                   &trans  &bt BT_NXT  &bt BT_PRV  &trans  &trans  &trans   &kp F12
-   &trans  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans  &trans      &trans      &trans  &trans  &trans   &trans
-   &trans  &trans     &trans       &trans       &trans       &trans       &trans &trans    &trans  &trans  &trans      &trans      &trans  &trans  &trans   &trans
-   &trans  &trans     &trans       &trans                    &trans       &trans &trans    &trans  &trans  &trans      &trans      &trans  &trans  &trans
-            >;
-        };
-	};
 };
