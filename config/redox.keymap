@@ -17,18 +17,18 @@
 
         default_layer {
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
-// | ~ `   |  1 !  |  2 @  |   3 #  |  4 $  |  5 %  |                        ---                   |  6 ^  |  7 &  |  8 *  |  9 (  |  0 )  |   - _    |
-// | TAB   |   Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  PWR  |   Y   |   U   |   I   |   O   |   P   |   = +    |
-// | ESC   |   A   |   S   |    D   |   F   |   G   |  [ {    |              ---           |  } ]  |   H   |   J   |   K   |   L   |  ;:   |   ' "    |
-// | SHIFT |   Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  ----- |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
-// | GLOBE | LCTRL |  CMD  |   ALT  |  ---  |  | \  | B SPACE |    ENTER  |  ---  |  ----- | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
+// | ~ `   |  1 ! |  2 @  |   3 #  |  4 $  |  5 %  |                        ---                   |  6 ^  |  7 &  |  8 *  |  9 (  |  0 )  |   - _    |
+// | TAB   |  Q   |   W   |    E   |   R   |   T   |   M1    |              ---           |  PWR  |   Y   |   U   |   I   |   O   |   P   |   = +    |
+// | ESC   |  A   |   S   |    D   |   F   |   G   |  [ {    |              ---           |  } ]  |   H   |   J   |   K   |   L   |  ;:   |   ' "    |
+// | SHIFT |  Z   |   X   |    C   |   V   |   B   |  PG_UP  |  PG_DOWN  |  ---  |  ----- |  END  |   N   |   M   |  , <  |  . >  |  /?   |  RSHIFT  |
+// | LCTRL | LCMD |  ALT  |  ENTER |  ---  |  | \  | B SPACE |    ENTER  |  ---  |  ----- | SPACE |  ALT  |  ---  |   <   |   v   |   ^   |    >     |
 // ----------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-   &kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4 &kp N5                                                &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &kp MINUS
-   &kp TAB    &kp Q     &kp W     &kp E      &kp R  &kp T                 &to 1                         &kp K_PWR &kp Y    &kp U    &kp I     &kp O    &kp P     &kp EQUAL
-   &kp ESCAPE &kp A     &kp S     &kp D      &kp F  &kp G                 &kp LBKT                      &kp RBKT  &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
-   &kp LSHFT  &kp Z     &kp X     &kp C      &kp V  &kp B                 &kp PG_UP &kp PG_DN    &trans &kp ENTER &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
-   &kp GLOBE  &kp LCMD  &kp LCTRL &kp LALT          &mt LEFT_CONTROL BSLH &kp BSPC  &kp ENTER    &trans &kp SPACE &kp RALT          &kp LEFT  &kp DOWN &kp UP    &kp RIGHT
+   &kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4 &kp N5                                            &kp N6   &kp N7   &kp N8    &kp N9   &kp N0    &kp MINUS
+   &kp TAB    &kp Q     &kp W     &kp E      &kp R  &kp T     &to 1                         &kp K_PWR &kp Y    &kp U    &kp I     &kp O    &kp P     &kp EQUAL
+   &kp ESCAPE &kp A     &kp S     &kp D      &kp F  &kp G     &kp LBKT                      &kp RBKT  &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
+   &kp LSHFT  &kp Z     &kp X     &kp C      &kp V  &kp B     &kp PG_UP &kp PG_DN    &trans &kp ENTER &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
+   &kp LCTRL  &kp LCMD  &kp LALT  &kp ENTER        &kp BSLH  &kp BSPC  &kp ENTER    &trans &kp SPACE &kp RALT          &kp LEFT  &kp DOWN &kp UP    &kp RIGHT
             >;
 
         };		
